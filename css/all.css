@@ -1,0 +1,561 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"); */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    color: #333;
+    line-height: 1.5;
+    background-color: #FBFBFB;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+h1{
+    font-size: clamp(52px, 8vw, 120px);
+    font-weight: 900;
+  }
+
+h2{
+    font-size: 64px;
+    font-weight: 700;
+  }
+
+h3{
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+h4{
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+
+h5{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+
+
+
+/* Layout 共通佈局 */
+
+.wrap {
+    max-width: 1920px;
+    margin: 0 auto;
+    line-height: 1.5;
+    background: #FBFBFB;
+}
+
+.navbar {    
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    
+}
+
+.navbar ul{
+    display: flex;
+    /* align-items: flex-start; */
+    gap: 0 40px;
+}
+
+.nav-item{
+    text-decoration: none;
+    color: #000;
+    font-size: 28px;
+    display: block;
+    font-weight: 700;
+      
+}
+
+/* .content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 0;
+    background: gray;
+    border: 1px solid;
+} */
+
+.footer{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 24px 0;
+    text-align: center;
+    /* border-top: 1px solid #6C757D; */
+}
+
+
+/* 首頁 CSS */
+
+
+
+/* 部落格總覽 CSS */
+.blog-overview{
+    display: flex;
+    align-items: stretch;
+}
+
+.banner-img{
+    width: 50%;
+  }
+  
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../images/desktop/index/Hero Section2.png');
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    padding-left: 80px;
+    color: #0027D5;
+  }
+
+@media(max-width: 992px) {   
+    .blog-overview{
+        flex-direction: column;
+    }
+    .banner-img{
+        width: 100%;
+    }
+
+    .banner-text{
+        width: 100%;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 24px;
+    }
+
+    .blog-header{
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+    .blog-pic{
+        width: 100%;
+    }
+    
+    .blog-title{
+        width: 100%;
+        padding: 48px 12px;
+    }
+
+    .blog-article{
+        padding: 64px 12px;
+    }
+}
+
+.search-box-container {
+    width: 100%;
+    max-width: 416px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 16.25%;
+    margin-right: 62.08%;
+    margin-top: 80px;
+}
+
+/* @media (max-width: 992px) {
+    .search-box-container {
+      margin: 0 auto;
+    }
+} */
+
+.search-box{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    /* width: 100%; */
+    border: 1px solid #4B4B4B;
+    max-width: 416px;
+    border-radius: 40px;
+    gap: 0 10px;
+    box-sizing: border-box;
+  }
+  
+.search-box i{
+    font-size: 1rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    color: #4B4B4B;
+    /* font-size: 1.1rem; */
+  }
+  
+.search-box input[type="text"] {
+    flex: 1;
+    font-size: 1rem;
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+
+@media (max-width: 767px) {
+    .search-box-container {
+      margin: 0 auto;
+      padding: 64px 12px 0 12px;
+      justify-content: center;
+      max-width: 375px;
+    }
+  
+    .search-box {
+      width: 100%;
+      
+    }
+  }
+
+
+.blog{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.article{
+    width: calc((100% - 48px) / 3);
+    padding: 40px 0;
+}
+
+@media(max-width: 992px){
+    .article{
+        width: calc((100% - 24px) / 2);
+    }
+    
+}
+
+@media(max-width: 767px) {
+    .blog{
+        gap: 32px;
+        padding: 40px 0;
+    }
+
+    .article{
+        width: 100%;
+        padding: 0 12px;
+    }
+    .article-img{
+        width: 100%;
+    }
+}
+
+.article-img{
+    margin-bottom: 16px;
+}
+
+.article-date{
+    margin-bottom: 4px;
+}
+
+.article-tag{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+.article-tag a{
+    font-size:24px;
+    color:#0027D5;
+    text-decoration: none;
+}
+
+.article h3{
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.article-content{
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 設定顯示 2 行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.read-botton{
+    border: 1px solid black;
+    color: #4B4B4B;
+    padding: 8px 16px;
+    border-radius: 40px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.read-botton:hover{
+    background-color: #4B4B4B;
+    color: white;
+}
+
+.article-tag .pop-article{
+    font-size: 16px;
+    border: 1px solid #0027D5;
+    color: white;
+    background: #0027D5;
+    padding: 6px 12px;
+    border-radius: 40px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 328px;
+    border-radius: 40px;
+    padding-bottom: 80px;
+}
+
+.pagination a, .pagination span{
+    color: #4B4B4B;
+    text-decoration: none;
+    padding: 8px 16px;
+    /* max-width: 40px; */
+    display: inline-block
+}
+
+.pagination a:hover{
+    background-color: #4B4B4B;
+    color: white;
+}
+
+
+/* 部落格詳細頁 CSS */
+.blog-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border-top: 1px solid #6C757D;
+    border-bottom: 1px solid #6C757D;
+    /* padding: 24px 0; */
+}
+
+.blog-pic{
+    width: 50%;
+}
+
+.blog-title{
+    width: 50%;
+}
+
+.blog-subtitle{
+    display: flex;
+    align-items: center;
+    color: #0027D5;
+    gap: 8px;
+    margin-bottom: 8px; 
+}
+
+.new-article{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    background: #0027D5;
+    padding: 6px 12px;
+    border-radius: 40px;
+}
+
+.blog-article{
+    max-width: 636px;
+    margin: 0 auto;
+    padding: 80px 0px;
+}
+
+.blog-article h3{
+    color: #0027D5;
+    margin-bottom: 24px;
+}
+
+.blog-article h5{
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.blog-article ol{
+    margin-bottom: 24px;
+}
+
+.blog-article ul{
+    margin-bottom: 24px;
+}
+
+.context img{
+    margin-bottom: 24px;
+}
+
+
+.list-style {
+    list-style: decimal; /* 顯示數字列點 */
+    padding-left: 20px; /* 增加縮排 */
+}
+
+.bullet-style {
+    list-style: disc; /* 顯示圓點列點 */
+    padding-left: 20px; /* 增加縮排 */
+}
+
+.bg-grey{
+    background-color: #EDEDED;
+    padding: 24px;
+    border-radius: 24px;
+    font-weight: 700;
+}
+
+.word-blue{
+    color: #0027D5;
+}
+
+.page-up-down{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bt-page{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    color: #4B4B4B;
+    border-radius: 40px;
+    margin-top: 24px;
+    padding: 8px 16px;
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+.bt-page:hover{
+    background-color: #4B4B4B;
+    color: white;
+}
+
+.contact-sub{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 24px;
+    padding: 80px 0;
+    border-top: 1px solid #6C757D;
+}
+
+.email{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+@media(max-width: 992px) {    
+    .blog-header{
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+    .blog-pic{
+        width: 100%;
+    }
+    
+    .blog-title{
+        width: 100%;
+        padding: 48px 12px;
+    }
+
+    .blog-article{
+        padding: 64px 12px;
+    }
+}
+
+@media(max-width: 767px) {    
+    .contact-sub{
+        display: none;
+    }
+    .footer{
+        border-top: 1px solid #6C757D;
+    }
+}
+
+.mb-8{
+    margin-bottom: 0.5rem;
+}
+
+.mb-24{
+    margin-bottom: 1.5rem;
+}
+
+.mb-48{
+    margin-bottom: 3rem;
+}
